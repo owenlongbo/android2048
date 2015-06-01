@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">游戏2048</string>
+    <string name="score">Score</string>
+    <string name="best_score">Max Score</string>
+    <string name="new_game">重新开始</string>
+    <string name="start_game">开始游戏</string>
+    <string name="start_charts">排行榜</string>
+    <string name="context_menu">Context menu</string>
+    <!--菜单字符串-->
+    <string name="menu_charts">我要看榜</string>
+    <string name="menu_exit">退出游戏</string>
+    <string name="menu_info">关于作者</string>
+    <string name="menu_restart">重新开始</string>
+    <string name="menu_tutorial">攻略教程</string>
+
+    <!--Info 字符串 -->
+    <string name="info_name">我的名字：陈龙博</string>
+    <string name="info_mail">邮箱：b3069741@126.com</string>
+
+    <!-- dialog 字符串 -->
+    <string name="dialog_hint">您的姓名</string>
+    <string name="dialog_title">您输了</string>
+    <string name="dialog_positive">我要入榜</string>
+    <string name="dialog_negative">放弃</string>
+    <string name="dialog_open_title">用户信息</string>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/longlong/mydata/ASproject/Game2048/library/res"><file name="ic_launcher" path="/home/longlong/mydata/ASproject/Game2048/library/res/drawable-xhdpi/ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file path="/home/longlong/mydata/ASproject/Game2048/library/res/values/strings.xml" qualifiers=""><string name="app_name">SwipeMenuListView</string></file><file path="/home/longlong/mydata/ASproject/Game2048/library/res/values/styles.xml" qualifiers=""><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style><style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style></file><file path="/home/longlong/mydata/ASproject/Game2048/library/res/values-v14/styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style></file><file name="ic_launcher" path="/home/longlong/mydata/ASproject/Game2048/library/res/drawable-hdpi/ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="/home/longlong/mydata/ASproject/Game2048/library/res/drawable-mdpi/ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file path="/home/longlong/mydata/ASproject/Game2048/library/res/values-v11/styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style></file></source><source path="/home/longlong/mydata/ASproject/Game2048/library/build/generated/res/rs/debug"/><source path="/home/longlong/mydata/ASproject/Game2048/library/build/generated/res/generated/debug"/></dataSet><dataSet config="debug"><source path="/home/longlong/mydata/ASproject/Game2048/library/src/debug/res"/></dataSet><mergedItems/></merger>

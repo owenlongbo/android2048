@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/allBack"
+    android:orientation="vertical">
+
+    <!-- vertical垂直  horizontal水平 -->
+    <!-- 线性布局 -->
+    <!-- match 是占全部 wrap是根据控件大小变化  match和fill相同 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@color/scoreBack"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/otherFont" />
+            <!-- 字体 -->
+
+            <TextView
+                android:id="@+id/tvScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/otherFont" />
+        </LinearLayout>
+        <!-- weight 权值 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/scoreBack"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/best_score"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/otherFont" />
+
+            <TextView
+                android:id="@+id/tvBestScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/otherFont" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 层布局 -->
+
+    <FrameLayout
+        android:id="@+id/gameContainer"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/gameViewBack">
+
+        <!-- 游戏控件 -->
+
+        <com.game.Utils.GameView
+            android:id="@+id/gameView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- 动画控件 -->
+
+        <com.game.Utils.AnimLayer
+            android:id="@+id/animLayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</LinearLayout>
