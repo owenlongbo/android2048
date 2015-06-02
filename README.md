@@ -12,6 +12,9 @@
 ###使用到的开源库
 
 TextView水波纹动画  [https://github.com/RomainPiel/Titanic](https://github.com/RomainPiel/Titanic)
+
 开始界面滚动条  [https://github.com/daimajia/NumberProgressBar](https://github.com/daimajia/NumberProgressBar)
+
 好看的菜单  [https://github.com/Yalantis/Context-Menu.Android](https://github.com/Yalantis/Context-Menu.Android)
+
 可滑动的ListView [https://github.com/baoyongzhang/SwipeMenuListView](https://github.com/baoyongzhang/SwipeMenuListView)
