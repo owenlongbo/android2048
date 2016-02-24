@@ -3,6 +3,10 @@ machine:
     version: oraclejdk8
   environment:
     ANDROID_HOME: /usr/local/android-sdk-linux
+    
+notify:
+  webhooks:
+    - url: https://hooks.pubu.im/services/21nzpdbkyp3gtgy
 
 dependencies:
   override:
