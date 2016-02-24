@@ -16,4 +16,4 @@ test:
   override:
     - ./gradlew build
   post:
-    - cp -R ./app $CIRCLE_ARTIFACTS
+    - cp -R ./app/build/outputs/apk $CIRCLE_ARTIFACTS
