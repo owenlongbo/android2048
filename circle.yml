@@ -1,0 +1,19 @@
+machine:
+  java:
+    version: oraclejdk8
+  environment:
+    ANDROID_HOME: /usr/local/android-sdk-linux
+
+dependencies:
+  override:
+    - echo y | android update sdk --no-ui --filter "android-21"
+    - echo y | android update sdk --no-ui --filter "build-tools-21.1.2"
+    - echo y | android update sdk --no-ui --filter "extra-android-m2repository"
+    - echo y | android update sdk --no-ui --filter "extra-android-support"
+    - echo y | android update sdk --no-ui --filter "extra-google-m2repositor"
+
+test:
+  override:
+    - ./gradlew build
+  post:
+    - cp -R ./XXXXXXXX/build/apk $CIRCLE_ARTIFACTS
