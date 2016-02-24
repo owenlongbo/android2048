@@ -14,10 +14,9 @@ dependencies:
     - echo y | android update sdk --no-ui --filter "build-tools-21.1.2"
     - echo y | android update sdk --no-ui --filter "extra-android-m2repository"
     - echo y | android update sdk --no-ui --filter "extra-android-support"
-    - echo y | android update sdk --no-ui --filter "extra-google-m2repositor"
-
+    
 test:
   override:
-    - ./gradlew build
+    - ./gradlew assembleRelease
   post:
-    - cp -R ./app/build/outputs/apk $CIRCLE_ARTIFACTS
+    - cp -r android2048/app/build/outputs/apk $CIRCLE_ARTIFACTS
