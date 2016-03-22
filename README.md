@@ -1,6 +1,6 @@
 ###Android2048
 
-本人博客：[smallsoho.com](smallsoho.com)
+本人博客：[http://www.smallsoho.com](smallsoho.com)
 
 包括各种特效，功能包括：
 
