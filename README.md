@@ -1,4 +1,4 @@
-###Android2048
+### Android2048
 
 本人博客：[smallsoho.com](http://www.smallsoho.com)
 
@@ -9,7 +9,7 @@
 - 攻略教程
 - 开始游戏界面
 
-###使用到的开源库
+### 使用到的开源库
 
 TextView水波纹动画  [https://github.com/RomainPiel/Titanic](https://github.com/RomainPiel/Titanic)
 
@@ -19,7 +19,7 @@ TextView水波纹动画  [https://github.com/RomainPiel/Titanic](https://github.
 
 可滑动的ListView [https://github.com/baoyongzhang/SwipeMenuListView](https://github.com/baoyongzhang/SwipeMenuListView)
 
-###展示
+### 展示
 
 ![1](image/1.gif)![1](image/2.gif)
 ![1](image/3.gif)![1](image/4.gif)
