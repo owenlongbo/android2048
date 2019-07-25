@@ -69,20 +69,18 @@
 
     <FrameLayout
         android:id="@+id/gameContainer"
-        android:layout_width="320dp"
-        android:layout_height="320dp"
+        android:layout_width="370dp"
+        android:layout_height="370dp"
         android:layout_gravity="center_horizontal"
         android:background="@color/gameViewBack">
 
         <!-- 游戏控件 -->
-
         <com.game.Utils.GameView
             android:id="@+id/gameView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
         <!-- 动画控件 -->
-
         <com.game.Utils.AnimLayer
             android:id="@+id/animLayer"
             android:layout_width="match_parent"

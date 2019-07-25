@@ -51,8 +51,6 @@
         custom:progress_text_color="@color/google_blue"
         custom:progress_text_offset="1dp"
         custom:progress_text_visibility="visible"
-        custom:max="100"
-        custom:progress="0"
         android:id="@+id/number_progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

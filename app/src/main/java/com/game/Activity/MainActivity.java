@@ -9,7 +9,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -29,7 +29,7 @@ import com.yalantis.contextmenu.lib.interfaces.OnMenuItemLongClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends ActionBarActivity implements OnMenuItemClickListener,
+public class MainActivity extends AppCompatActivity implements OnMenuItemClickListener,
         OnMenuItemLongClickListener {
 
     private MainFragment mainFragment;
@@ -73,21 +73,6 @@ public class MainActivity extends ActionBarActivity implements OnMenuItemClickLi
 
     //获取数据
     private List<MenuObject> getMenuObjects() {
-        // You can use any [resource, bitmap, drawable, color] as image:
-        // item.setResource(...)
-        // item.setBitmap(...)
-        // item.setDrawable(...)
-        // item.setColor(...)
-        // You can set image ScaleType:
-        // item.setScaleType(ScaleType.FIT_XY)
-        // You can use any [resource, drawable, color] as background:
-        // item.setBgResource(...)
-        // item.setBgDrawable(...)
-        // item.setBgColor(...)
-        // You can use any [color] as text color:
-        // item.setTextColor(...)
-        // You can set any [color] as divider color:
-        // item.setDividerColor(...)
 
         List<MenuObject> menuObjects = new ArrayList<>();
 
@@ -123,19 +108,16 @@ public class MainActivity extends ActionBarActivity implements OnMenuItemClickLi
 
     //初始化toolbar
     private void initToolbar() {
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        TextView mToolBarTextView = (TextView) findViewById(R.id.text_view_toolbar_title);
+        Toolbar mToolbar = findViewById(R.id.toolbar);
+        TextView mToolBarTextView = findViewById(R.id.text_view_toolbar_title);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
         mToolbar.setNavigationIcon(R.drawable.btn_back);
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+        mToolbar.setNavigationOnClickListener(v -> onBackPressed());
         mToolBarTextView.setText("2048");
     }
 
@@ -162,12 +144,10 @@ public class MainActivity extends ActionBarActivity implements OnMenuItemClickLi
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.context_menu:
-                if (fragmentManager.findFragmentByTag(ContextMenuDialogFragment.TAG) == null) {
-                    mMenuDialogFragment.show(fragmentManager, ContextMenuDialogFragment.TAG);
-                }
-                break;
+        if (item.getItemId() == R.id.context_menu) {
+            if (fragmentManager.findFragmentByTag(ContextMenuDialogFragment.TAG) == null) {
+                mMenuDialogFragment.show(fragmentManager, ContextMenuDialogFragment.TAG);
+            }
         }
         return super.onOptionsItemSelected(item);
     }
@@ -176,34 +156,28 @@ public class MainActivity extends ActionBarActivity implements OnMenuItemClickLi
     public void onMenuItemClick(View clickedView, int position) {
         Intent i;
         switch (position) {
-
             //取消
             case 0:
                 break;
-
             //查看教程
             case 1:
                 i = new Intent(this, WebHelpActivity.class);
                 startActivity(i);
                 break;
-
             //重新开始
             case 2:
                 mainFragment.startGame();
                 break;
-
             //我要看榜
             case 3:
                 i = new Intent(this, ChartsActivity.class);
                 startActivity(i);
                 break;
-
             //关于作者
             case 4:
                 i = new Intent(this, InfoActivity.class);
                 startActivity(i);
                 break;
-
             //退出游戏
             case 5:
                 finish();
